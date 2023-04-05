@@ -8,22 +8,25 @@ function getDataFromJson() {
     .then((objs) => loadObjs(objs))
     .finally(console.log("Finished"))
     .catch(handleErr);
-
+  let i = 0;
   function loadObjs(objs) {
     const divResults = document.querySelector("#results");
     let toDOM = `
-    <div>
+    
     ${objs
-      .map((obj) => {
-        return `<object data=${obj.icon} class="icon"></object>
-         <p>${obj.category}</p>
-         <div class='score'>
-           <p><span>${obj.score}</span>/100</p>
-         </div>
+      .map((obj) => {++i;
+        return `
+        <div class="card card${i}">
+          <object data=${obj.icon} class="icon"></object>
+          <p>${obj.category}</p>
+          <div class='score'>
+            <p><span>${obj.score}</span>/ 100</p>
+          </div>
+        </div>
       `;
       })
       .join("")}
-    </div>`;
+    `;
     console.log(toDOM);
     divResults.innerHTML = toDOM;
   }
