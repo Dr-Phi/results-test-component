@@ -1,13 +1,176 @@
 
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/* Boxes (remove later) */
 
 
 
 #results{
-  min-height: 30rem;
+  min-height: 100%;
   border: 2px solid black;
 }
 
+article {
+  border: 2px solid green;
+}
 
+/* Real styles */
+@font-face {
+  font-family: myFont;
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf),
+  local(Verdana);
+}
+.fs-400 {
+  font-size: large;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(241, 100%, 89%);
+  font-family: myFont, Helvetica,
+    sans-serif ;
+    font-size: 18px;
+}
+#component {
+  display: flex;
+  border: 3px solid red;
+  border-radius: 2rem;
+}
+
+header {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  flex-grow: 1;
+  width: 47%;
+  text-align: center;
+  border-radius: inherit;
+}
+
+h2.fs-400{
+  padding: 1.4rem 0;
+}
+
+
+#circle-bg {
+  margin: 0 auto;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 10.2rem ;
+    height: 10.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#circle-bg p {
+  color: hsl(0, 0%, 100%);
+  font-size: 4vw;
+  font-weight: 800;
+  margin-inline: auto;
+}
+#circle-bg span {
+  font-size: 15px;
+  font-weight: 400;
+  display: block;
+  margin-top: -12.8px;
+  color: hsl(241, 100%, 89%);
+}
+
+h3 {
+  padding-top: 1rem;
+
+  color:hsl(0, 0%, 100%);
+  font-size: 1.6rem;
+}
+
+h3 + p {
+  font-size: 16px;
+  padding-inline: 2.4rem;
+  margin-top: .8rem;
+}
+
+
+article {
+  flex-grow: 1;
+  width: 53%;
+}
 
 
 
