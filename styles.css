@@ -237,3 +237,18 @@ button:hover{
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media (max-width: 600px) {
+  #component {
+    display: initial;
+    text-align: center;
+    margin: 0 auto;
+  }
+  header {
+    padding-top: 5rem;
+    min-width: 100%;
+  }
+  h3 + p {
+    padding-bottom: 2rem;
+  }
+}
